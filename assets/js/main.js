@@ -1,19 +1,20 @@
 $(document).ready(function() {
   randomNumberInRange(1,100);
   createNumber(randomNumbers);
-
+  
+  //genero 5 numeri casuali e li inserisco nell'array randomNumber
+  $('#random-numbers').text(randomNumbers);
 
 });
 //creo un array vuoto per ospitare i numeri casuali
 var randomNumbers = [];
 
-//genero 5 numeri casuali e li inserisco nell'array randomNumber
+
 // randomNumbers = createNumber(array);
 console.log(randomNumbers);
 
-
-
 //faccio partire un timer di 30 secondi
+
 //chiedo all'utente di inserire per 5 volte un numero che ha visto precedentemente
 //con un prompt
 //il software dice quanti e quali numeri sono stati individuati
