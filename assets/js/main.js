@@ -1,11 +1,19 @@
 $(document).ready(function() {
+  randomNumberInRange();
+  createNumber();
+  //creo un array vuoto per ospitare i numeri casuali
+  var randomNumbers = [];
 
-//genero 5 numeri casuali e li stampo
-var randomNumber = randomNumberInRange(1, 100)
-//faccio partire un timer di 30 secondi
-//chiedo all'utente di inserire per 5 volte un numero che ha visto precedentemente
-//con un prompt
-//il software dice quanti e quali numeri sono stati individuati
+  randomNumbers = createNumber(array);
+  console.log(randomNumbers);
+
+  //genero 5 numeri casuali e li inserisco nell'array randomNumber
+
+
+  //faccio partire un timer di 30 secondi
+  //chiedo all'utente di inserire per 5 volte un numero che ha visto precedentemente
+  //con un prompt
+  //il software dice quanti e quali numeri sono stati individuati
 
 
 });
@@ -13,7 +21,7 @@ var randomNumber = randomNumberInRange(1, 100)
 
 
 
-//FUNTIONS
+//FUNCTIONS
 //funzione per generare un numero random in range
 function randomNumberInRange(min, max) {
   if (isNaN(min) || isNaN(max)) {
@@ -21,4 +29,16 @@ function randomNumberInRange(min, max) {
   } else {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+}
+
+//funzione per creare 5 numeri bomba casuali
+function createNumber(array) {
+  while (array.length < 5) {
+    var numero = randomNumberInRange(1, 100);
+
+    if (!array.includes(numero)) {
+      array.push(numero);
+    }
+  }
+  return array;
 }
