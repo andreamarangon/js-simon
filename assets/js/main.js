@@ -9,18 +9,25 @@ $(document).ready(function() {
   setTimeout(function () {
       $('#random-numbers').hide();
     },3000);
+
+  //chiedo all'utente di inserire per 5 volte un numero che ha visto precedentemente
+  for (var i = 0; i < 5; i++) {
+    var userNumber = parseInt(prompt('Inserisci un numero'));
+    userNumbers.push(userNumber);
+  }
+  console.log(userNumbers);
+  //con un prompt
+  //il software dice quanti e quali numeri sono stati individuati
+
 });
 //creo un array vuoto per ospitare i numeri casuali
 var randomNumbers = [];
-
-
+//creo un array vuoto per ospitare i numeri dati da utente
+var userNumbers = [];
 // randomNumbers = createNumber(array);
 console.log(randomNumbers);
 
 
-//chiedo all'utente di inserire per 5 volte un numero che ha visto precedentemente
-//con un prompt
-//il software dice quanti e quali numeri sono stati individuati
 
 
 
